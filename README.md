@@ -27,10 +27,12 @@ Project ideas
                 *Other usres with similar results* add a div for each coffe type and put the users within the div. Coffee image will be used here. 
         3. Allowing a button to retake the quiz - Update the current user columns in the mysql table.
         4. Button for user can delete account.
-       
+
 
 How it is done
 Node, express, polished UI, folder structure, Heroku deployment
 
 Needed
+
+API call, MySQL, GET and POST routes, nodemailer
 API call, MySQL, GET and POST routes, nodemailer
