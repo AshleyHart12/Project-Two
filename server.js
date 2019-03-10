@@ -1,6 +1,13 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
+var bodyParser = require("body-parser");
+var methodOverride = require("method-override");
+var moment = require('moment');
+var request = require('request');
+var nodemailer = require('nodemailer');
+var path = require('path');
+
 
 var db = require("./models");
 
