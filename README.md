@@ -29,12 +29,10 @@ Project ideas
         4. Button for user can delete account.
 
 
-
-
-        
-
 How it is done
 Node, express, polished UI, folder structure, Heroku deployment
 
 Needed
+
+API call, MySQL, GET and POST routes, nodemailer
 API call, MySQL, GET and POST routes, nodemailer
