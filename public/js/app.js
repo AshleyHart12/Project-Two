@@ -12,23 +12,23 @@
 
     firebase.initializeApp(config);
 
-    const txtEmail = document.getElementById('txtEmail');
-    const logEmail = document.getElementById('logEmail');
-    const txtPassword = document.getElementById('txtPassword');
-    const logPassword = document.getElementById('logPassword');
-    const btnLogin = document.getElementById('btnLogin');
-    const btnSignUp = document.getElementById('btnSignUp');
-    const btnLogout = document.getElementById('btnLogout');
+    var txtEmail = document.getElementById('txtEmail');
+    var logEmail = document.getElementById('logEmail');
+    var txtPassword = document.getElementById('txtPassword');
+    var logPassword = document.getElementById('logPassword');
+    var btnLogin = document.getElementById('btnLogin');
+    var btnSignUp = document.getElementById('btnSignUp');
+    var btnLogout = document.getElementById('btnLogout');
 
     btnLogin.addEventListener('click', e => {
 
         event.preventDefault();
 
-        const email = logEmail.value;
-        const pass = logPassword.value;
-        const auth = firebase.auth();
+        var email = logEmail.value;
+        var pass = logPassword.value;
+        var auth = firebase.auth();
 
-        const promise = auth.signInWithEmailAndPassword(email, pass)
+        var promise = auth.signInWithEmailAndPassword(email, pass)
 
         promise.catch(e => console.log(e.message))
             .then(
@@ -44,11 +44,11 @@
 
         event.preventDefault();
 
-        const email = txtEmail.value;
-        const pass = txtPassword.value;
-        const auth = firebase.auth();
+        var email = txtEmail.value;
+        var pass = txtPassword.value;
+        var auth = firebase.auth();
 
-        const promise = auth.createUserWithEmailAndPassword(email, pass);
+        var promise = auth.createUserWithEmailAndPassword(email, pass);
             
         $('#exampleModal .close').click();
 
@@ -77,24 +77,6 @@
 
 }());
 
-$(document).ready(function () {
-
-    var today = moment().format('YYYY-MM-DD');
-    var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=3d866c05691ba06f9fa697f8e8c9e838&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=" + today;
-    var imgIDs = [$('#img1'), $('#img2'), $('#img3'), $('#img4'), $('#img5'), $('#img6'), $('#img7'), $('#img8'), $('#img9'), $('#img10')];
-
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).done(function (response) {
-        var movies = response.results;
-        for (i = 0; i < 10; i++) {
-            imgIDs[i].attr("src", "https://image.tmdb.org/t/p/w640" + movies[i].poster_path);
-        }
-
-    });
-
-});
 
 var user = firebase.auth().currentUser;
 var uid, email;
