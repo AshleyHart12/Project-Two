@@ -1,8 +1,8 @@
 --Drop the database
-DROP DATABASE IF EXISTS coffee_db;
-CREATE DATABASE coffee_db;
+DROP DATABASE IF EXISTS coffee_quiz_db;
+CREATE DATABASE coffee_quiz_db;
 
-USE coffee_db;
+USE coffee_quiz_db;
 
 CREATE TABLE coffee
 (
