@@ -1,105 +1,38 @@
-(function () {
+"use strict";
 
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyBA50olPzWGi0Jz3WCq5M3y-7zY4-Wd-IE",
-        authDomain: "coffee-quiz-303.firebaseapp.com",
-        databaseURL: "https://coffee-quiz-303.firebaseio.com",
-        projectId: "coffee-quiz-303",
-        storageBucket: "",
-        messagingSenderId: "371824733792"
-      };
+var fs = require("fs");
+var path = require("path");
+var Sequelize = require("sequelize");
+var basename = path.basename(module.filename);
+var env = process.env.NODE_ENV || "development";
+var config = require(__dirname + "/../config/config.json")[env];
+var db = {};
 
-    firebase.initializeApp(config);
-
-    var txtEmail = document.getElementById('txtEmail');
-    var logEmail = document.getElementById('logEmail');
-    var txtPassword = document.getElementById('txtPassword');
-    var logPassword = document.getElementById('logPassword');
-    var btnLogin = document.getElementById('btnLogin');
-    var btnSignUp = document.getElementById('btnSignUp');
-    var btnLogout = document.getElementById('btnLogout');
-
-    btnLogin.addEventListener('click', e => {
-
-        event.preventDefault();
-
-        var email = logEmail.value;
-        var pass = logPassword.value;
-        var auth = firebase.auth();
-
-        var promise = auth.signInWithEmailAndPassword(email, pass)
-
-        promise.catch(e => console.log(e.message))
-            .then(
-                function () {
-                    var user = firebase.auth().currentUser;
-                    var userRoute = "/current/" + user.uid;
-                    window.location.href = userRoute;
-            });
-    });
-
-
-    btnSignUp.addEventListener('click', e => {
-
-        event.preventDefault();
-
-        var email = txtEmail.value;
-        var pass = txtPassword.value;
-        var auth = firebase.auth();
-
-        var promise = auth.createUserWithEmailAndPassword(email, pass);
-            
-        $('#exampleModal .close').click();
-
-        promise.catch(e => console.log(e.message))
-            .then(
-                function () {
-                    window.location.href = "/survey";
-            });
-    });
-
-
-    btnLogout.addEventListener('click', e => {
-        firebase.auth().signOut();
-        window.location.href = "/";
-    });
-
-    firebase.auth().onAuthStateChanged(firebaseUser => {
-        if (firebaseUser) {
-            console.log(firebaseUser);
-            btnLogout.classList.remove('hide');
-        } else {
-            console.log("Not Logged In");
-            btnLogout.classList.add('hide');
-        }
-    });
-
-}());
-
-
-var user = firebase.auth().currentUser;
-var uid, email;
-
-if (user !== null) {
-    email = user.email;
-    uid = user.uid;
+if (config.use_env_variable) {
+  var sequelize = new Sequelize(process.env[config.use_env_variable]);
+} else {
+  var sequelize = new Sequelize(config.database,config.username,config.password,config
+  );
 }
-    
-    $("#sendEmailBtn").on("click", function() {
 
-            event.preventDefault();
+fs.readdirSync(__dirname)
+  .filter(function(file) {
+    return (
+      file.indexOf(".") !== 0 && file !== basename && file.slice(-3) === ".js"
+    );
+  })
+  .forEach(function(file) {
+    var model = sequelize.import(path.join(__dirname, file));
+    db[model.name] = model;
+  });
 
-            var user = firebase.auth().currentUser;
+Object.keys(db).forEach(function(modelName) {
+  if (db[modelName].associate) {
+    db[modelName].associate(db);
+  }
+});
 
-            var userInfo = {
-                email: user.email
-            }
-              
-              $.post("/email", userInfo)
-              .done(function() {
-                alert('Coffee Info Emailed!')
+db.sequelize = sequelize;
+db.Sequelize = Sequelize;
 
-              });
-
-    });
+module.exports = db;
