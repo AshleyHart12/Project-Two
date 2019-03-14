@@ -1,4 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
+
   var CoffeeQuiz = sequelize.define("CoffeeQuiz", {
     user_name: DataTypes.STRING,
     email: DataTypes.TEXT,
@@ -6,3 +7,5 @@ module.exports = function(sequelize, DataTypes) {
   });
   return CoffeeQuiz;
 };
+
+
