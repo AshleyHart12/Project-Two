@@ -1,7 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Noles08!!",
+    "password": "Kodiak2129!",
+
     "database": "coffee_quiz_db",
     "host": "localhost",
     "dialect": "mysql"
