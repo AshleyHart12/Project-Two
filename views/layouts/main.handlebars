@@ -13,7 +13,7 @@
 
     <!-- My css -->
 
-    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+    {{!-- <link rel="stylesheet" href="/assets/css/style.css" type="text/css" /> --}}
 
     <!-- moments.js -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
@@ -23,7 +23,21 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-inverse" role="navigation">
+    <div class="title">
+        <h1>What is your coffee type?!?!</h1>
+    </div>
+    <div>
+        <form action="/action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="First Name">
+  <br>
+  Email:<br>
+  <input type="text" name="email" value="Email">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+    </div>
+    {{!-- <nav class="navbar navbar-default navbar-inverse" role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -35,9 +49,9 @@
       </button>
                 <a class="navbar-brand" href="/">Coffee Quiz</a>
                 <p class="slogan">MATCHING A COFFEE BASED ON YOUR PERSONALITY</p>
-            </div>
+            </div> --}}
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            {{!-- <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                 <!--                <div class="container">-->
@@ -118,15 +132,11 @@
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
-    </nav>
+    </nav> --}}
     {{{ body }}}
-
-    <footer class="container-fluid text-center">
-        <p>The Coffee Quiz</p>
-    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="/public/js/app.js"></script>
-    <script src="/assets/js/survey.js"></script>
+    {{!-- <script src="/public/js/app.js"></script> --}}
+    {{!-- <script src="/public/js/survey.js"></script> --}}
 
 </body>
 
