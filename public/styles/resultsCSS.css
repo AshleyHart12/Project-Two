@@ -12,6 +12,10 @@
    
 }
 
+#words {
+    color: black;
+}
+
 
 #resultTabs {
     background-image: url(../assets/images/heart.jpg)
