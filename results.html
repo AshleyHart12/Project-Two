@@ -3,219 +3,214 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link href="public/styles/resultsCSS.css" rel="stylesheet" type="text/css">
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-        crossorigin="anonymous">
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP" rel="stylesheet">
-    <!-- JQUERY -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!--Materialize Link-->
-    <link type="text/css" rel="stylesheet" href="public/styles/materialize/materialize/css/materialize.min.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="public/styles/materialize/css/materialize.min.css" media="screen,projection" />
-   
-    <title>Coffe Quiz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="public/styles/resultsCSS.css" rel="stylesheet" type="text/css">
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP" rel="stylesheet">
+  <!-- JQUERY -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--Materialize Link-->
+  <link type="text/css" rel="stylesheet" href="public/styles/materialize/materialize/css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="public/styles/materialize/css/materialize.min.css" media="screen,projection" />
+
+  <title>Coffe Quiz</title>
 
 </head>
 
 <body>
 
-    <div class="container" id="titleResults">
+  <div class="container" id="titleResults">
 
-        <!-- ROW FOR TITLE -->
-        <div class="row" id="title">
-            <div class="col s12"><h3>What's Your Flavor?</h3></div>
-        </div>
-
-        <!-- ROW FOR USER'S RESULT AND COFFEE DESCRIPTION -->
-        <div class="row" id="title">
-
-            <div class="col s12">
-                <!-- <h2 class="header">Horizontal Card</h2> -->
-                <div class="card horizontal">
-                  <div class="card-image">
-                    <img src="public/assets/images/resultVerticalPicture.jpg" width="200" height="200">
-                  </div>
-                  <div class="card-stacked">
-                    <div class="card-content">
-                      <p>I am a very simple card.</p>
-                    </div>
-                    <!-- <div class="card-action">
-                      <a href="#">This is a link</a>
-                    </div> -->
-                  </div>
-                </div>
-              </div>
-  
-             
-            <!-- <div class="col s6">
-                    <div class="card horizontal">
-                            <div class="card-content black-text">
-                              <span class="card-title">Vanilla Latte: </span>
-                              <hr>
-                              <p>I am a very simple card. I am good at containing small bits of information.
-                              I am convenient because I require little markup to use effectively.</p>
-                            </div>
-            </div>
-        </div> -->
-        
-        
-    </div> <!-- END RESULTS TOP ROW -->
-
-        <!-- ROW TO HOLD CARD FOR EACH RESULT CHOICE -->
-        <!-- <div class="container" id="resultTabs"> -->
-        <div class="row">
-            <div class="col s4">
-                    <div class="card">
-                            <div class="card-content" id="blackCoffee">
-                            <h4>Black Coffee</h4>
-                            </div>
-                            <div class="card-tabs">
-                              <ul class="tabs tabs-fixed-width">
-                                <li class="tab"><a href="#description">Description</a></li>
-                                <li class="tab"><a class="active" href="#userMatches">Matches</a></li>
-                                
-                              </ul>
-                            </div>
-
-                            <div class="card-content grey lighten-4">
-                              <div id="description">Fun Description</div>
-                              <div id="userMatches">Username1</div>
-                              <div id="userMatches">Username2</div>
-                              </div>
-                          </div>
-            </div>
-
-            <div class="col s4">
-                    <div class="card">
-                            <div class="card-content" id="latte">
-                            <h4>Vanilla Latte</h4>
-                            </div>
-                            <div class="card-tabs">
-                              <ul class="tabs tabs-fixed-width">
-                                <li class="tab"><a href="#test4">Test 1</a></li>
-                                <li class="tab"><a class="active" href="#test5">Test 2</a></li>
-                                <li class="tab"><a href="#test6">Test 3</a></li>
-                              </ul>
-                            </div>
-                            <div class="card-content grey lighten-4">
-                              <div id="test4">Test 1</div>
-                              <div id="test5">Test 2</div>
-                              <div id="test6">Test 3</div>
-                            </div>
-                          </div>
-            </div>
-
-            <div class="col s4">
-                    <div class="card">
-                            <div class="card-content" id="cappuccino">
-                            <h4>Cappuccino</h4>
-                            </div>
-                            <div class="card-tabs">
-                              <ul class="tabs tabs-fixed-width">
-                                <li class="tab"><a href="#test1">Description</a></li>
-                                <li class="tab"><a class="active" href="#test2">Matches</a></li>
-                                
-                              </ul>
-                            </div>
-                            <div class="card-content grey lighten-4">
-                              <div id="test1">Username1</div>
-                              <div id="test2">Username2</div>
-                              <div id="test3">Username3</div>
-                            </div>
-                          </div>
-            </div>
-
-            <div class="row">
-            <div class="col s4">
-                    <div class="card">
-                            <div class="card-content" id="chaiTea">
-                            <h4>Chai Tea</h4>
-                            </div>
-                            <div class="card-tabs">
-                              <ul class="tabs tabs-fixed-width">
-                                <li class="tab"><a href="#test1">Description</a></li>
-                                <li class="tab"><a class="active" href="#test2">Matches</a></li>
-                                
-                              </ul>
-                            </div>
-                            <div class="card-content grey lighten-4">
-                              <div id="test1">Username1</div>
-                              <div id="test2">Username2</div>
-                              <div id="test3">Username3</div>
-                            </div>
-                          </div>
-            </div>
-
-            <div class="col s4">
-                    <div class="card">
-                            <div class="card-content" id="espresso">
-                            <h4>Espresso</h4>
-                            </div>
-                            <div class="card-tabs">
-                              <ul class="tabs tabs-fixed-width">
-                                <li class="tab"><a href="#test1">Description</a></li>
-                                <li class="tab"><a class="active" href="#test2">Matches</a></li>
-                                
-                              </ul>
-                            </div>
-                            <div class="card-content grey lighten-4">
-                              <div id="test1">Username1</div>
-                              <div id="test2">Username2</div>
-                              <div id="test3">Username3</div>
-                            </div>
-                          </div>
-            </div>
-
-            <div class="col s4">
-                    <div class="card">
-                            <div class="card-content" id="caramel">
-                            <h4>Caramel Macchiato</h4>
-                            </div>
-                            <div class="card-tabs">
-                              <ul class="tabs tabs-fixed-width">
-                                <li class="tab col s6"><a href="#description">Description</a></li>
-                                <li class="tab col s6"><a class="active" href="#userMatches">Matches</a></li>
-                                
-                              </ul>
-                            </div>
-                          
-                            <div class="card-content grey lighten-4" id="userMatches">
-                              <div id="userMatches">Username1</div>
-                              <div id="userMatches">Username2</div>
-                              <div id="userMatches">Username3</div>
-                            </div>
-                          </div>
-                          
-            </div>
-        </div>
+    <!-- ROW FOR TITLE -->
+    <div class="row" id="title">
+      <div class="col s12">
+        <h3>What's Your Flavor?</h3>
+      </div>
     </div>
-    
-        <!-- ROW FOR GOOGLE MAP API -->
-        <div class="row">
-            <div class="col 12">
 
+    <!-- ROW FOR USER'S RESULT AND COFFEE DESCRIPTION -->
+    <div class="container">
+    <div class="row" id="title">
+
+      
+      <div class="col s12">
+        <!-- <h2 class="header">Horizontal Card</h2> -->
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="public/assets/images/resultVerticalPicture.jpg" width="200" height="200">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content" id="words">
+              <h5>Username: Cappuccino</h5>
+              <hr>
+              <br>
+              <h6>This is a fun description of how your results relate to your personality :)</h6>
             </div>
+
+          </div>
         </div>
-        <!-- END FULL CONTAINER -->
-    </div> 
+      </div>
+
+
+    </div> <!-- END RESULTS TOP ROW -->
+  </div>
+
+    <!-- ROW TO HOLD CARD FOR EACH RESULT CHOICE -->
+    <!-- <div class="container" id="resultTabs"> -->
+    <div class="row">
+      <div class="col s4">
+        <div class="card">
+          <div class="card-content" id="blackCoffee">
+            <h4>Black Coffee</h4>
+          </div>
+          <div class="card-tabs">
+            <ul class="tabs tabs-fixed-width">
+              <li class="tab"><a href="#description">Description</a></li>
+              <li class="tab"><a class="active" href="#userMatches">Matches</a></li>
+
+            </ul>
+          </div>
+
+          <div class="card-content grey lighten-4">
+            <div id="description">Fun Description</div>
+            <div id="userMatches">Username1</div>
+            <div id="userMatches">Username2</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s4">
+        <div class="card">
+          <div class="card-content" id="latte">
+            <h4>Vanilla Latte</h4>
+          </div>
+          <div class="card-tabs">
+            <ul class="tabs tabs-fixed-width">
+              <li class="tab"><a href="#test4">Test 1</a></li>
+              <li class="tab"><a class="active" href="#test5">Test 2</a></li>
+              <li class="tab"><a href="#test6">Test 3</a></li>
+            </ul>
+          </div>
+          <div class="card-content grey lighten-4">
+            <div id="test4">Test 1</div>
+            <div id="test5">Test 2</div>
+            <div id="test6">Test 3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s4">
+        <div class="card">
+          <div class="card-content" id="cappuccino">
+            <h4>Cappuccino</h4>
+          </div>
+          <div class="card-tabs">
+            <ul class="tabs tabs-fixed-width">
+              <li class="tab"><a href="#test1">Description</a></li>
+              <li class="tab"><a class="active" href="#test2">Matches</a></li>
+
+            </ul>
+          </div>
+          <div class="card-content grey lighten-4">
+            <div id="test1">Username1</div>
+            <div id="test2">Username2</div>
+            <div id="test3">Username3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s4">
+          <div class="card">
+            <div class="card-content" id="chaiTea">
+              <h4>Chai Tea</h4>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a href="#test1">Description</a></li>
+                <li class="tab"><a class="active" href="#test2">Matches</a></li>
+
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="test1">Username1</div>
+              <div id="test2">Username2</div>
+              <div id="test3">Username3</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="card">
+            <div class="card-content" id="espresso">
+              <h4>Espresso</h4>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a href="#test1">Description</a></li>
+                <li class="tab"><a class="active" href="#test2">Matches</a></li>
+
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="test1">Username1</div>
+              <div id="test2">Username2</div>
+              <div id="test3">Username3</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="card">
+            <div class="card-content" id="caramel">
+              <h4>Caramel Macchiato</h4>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab col s6"><a href="#description">Description</a></li>
+                <li class="tab col s6"><a class="active" href="#userMatches">Matches</a></li>
+
+              </ul>
+            </div>
+
+            <div class="card-content grey lighten-4" id="userMatches">
+              <div id="userMatches">Username1</div>
+              <div id="userMatches">Username2</div>
+              <div id="userMatches">Username3</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW FOR GOOGLE MAP API -->
+    <div class="row">
+      <div class="col 12">
+
+      </div>
+    </div>
+    <!-- END FULL CONTAINER -->
+  </div>
 
 
 
-        
-   
 
-    <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-      $(document).ready(function(){
-    $('.tabs').tabs();
-  });
-    </script>
+
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    $(document).ready(function () {
+      $('.tabs').tabs();
+    });
+  </script>
 
 </body>
+
 </html>
