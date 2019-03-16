@@ -5,7 +5,7 @@ var nodemailer = require("nodemailer");
 
 module.exports = function(app) {
   app.get("/", function(req, res) {
-    res.render("index");
+    res.render("login");
   });
   app.get("/survey", function(req, res) {
     res.render("survey");
@@ -18,10 +18,9 @@ module.exports = function(app) {
   app.post("/api/add", function(req, res) {
     console.log(req.body);
 
-    db.Users.create({
+    db.CoffeeQuiz.create({
       email: req.body.email,
-      topGenre: req.body.topGenre,
-      secondGenre: req.body.secondGenre,
+      username: req.body.username,
       uid: req.body.uid
     }).then(function(results) {
       res.json(results);
