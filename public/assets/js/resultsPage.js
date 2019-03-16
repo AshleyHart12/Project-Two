@@ -1,10 +1,10 @@
 $(document).ready(function() {
-
-$("#nextArrowOne").on("click", function() {
-
+  $("#submit").on("click", function() {
 
 
+  });
+
+$("#username").append("#username"); 
 
 
-
-}
+});
