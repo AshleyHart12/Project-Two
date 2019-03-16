@@ -2,14 +2,15 @@ require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
 var bodyParser = require("body-parser");
-var methodOverride = require("method-override");
-var moment = require('moment');
+// var methodOverride = require("method-override");
+// var moment = require('moment');
 var request = require('request');
-var nodemailer = require('nodemailer');
+// var nodemailer = require('nodemailer');
 var path = require('path');
+var sequelize = require("./config/connection");
 
 
-var db = require("./models");
+// var db = require("./models");
 
 var app = express();
 var PORT = process.env.PORT || 3000;
@@ -41,7 +42,7 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
+sequelize.sync(syncOptions).then(function() {
   app.listen(PORT, function() {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",

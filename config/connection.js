@@ -1,17 +1,27 @@
-const mysql = require('mysql');
-const Sequelize = require('sequelize');
-const keys = require('./keys');
 
+require('dotenv').config()
+let Sequelize = require('sequelize')
 
-let connection;
-if (process.env.JAWSDB_URL) {
-   connection = new Sequelize(process.env.JAWSDB_URL)
-}
-else {
-	connection = new Sequelize(keys.dbConfig.db, keys.dbConfig.user, keys.dbConfig.pass, {
-      host: keys.dbConfig.host,
-      dialect: "mysql"
-   });
-}
+console.log(process.env.DB_DATABASE)
 
-module.exports = connection;
+let sequelize = new Sequelize("coffee_quiz_db", "root", "Kodiak2129!", {
+    host: 'localhost',
+    port: 3306,
+    dialect: 'mysql',
+    pool: {
+        max: 10,
+        min: 0,
+        idle: 10000
+    }
+})
+
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log('Connection has been established successfully.');
+  })
+  .catch(err => {
+    console.error('Unable to connect to the database:', err);
+  });
+
+module.exports = sequelize
