@@ -18,10 +18,9 @@ module.exports = function(app) {
   app.post("/api/add", function(req, res) {
     console.log(req.body);
 
-    db.Users.create({
+    db.CoffeeQuiz.create({
       email: req.body.email,
-      topGenre: req.body.topGenre,
-      secondGenre: req.body.secondGenre,
+      username: req.body.username,
       uid: req.body.uid
     }).then(function(results) {
       res.json(results);
