@@ -5,7 +5,7 @@ var nodemailer = require("nodemailer");
 
 module.exports = function(app) {
   app.get("/", function(req, res) {
-    res.render("index");
+    res.render("login");
   });
   app.get("/survey", function(req, res) {
     res.render("survey");

@@ -3,10 +3,8 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.CoffeeQuiz.findAll({
-      user_name: 
-    }).then(function(dbExamples) {
-      res.render("index", {
+    db.CoffeeQuiz.findAll({}).then(function(dbExamples) {
+      res.render("login", {
         msg: "Welcome!",
         examples: dbExamples
       });
