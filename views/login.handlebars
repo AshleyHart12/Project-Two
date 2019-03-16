@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/styles/styles.css">
+    <style>
+html {
+  background-image: url("../public/assets/images/beans.jpg");
+  background-size: cover;
+  color: #fff !important;
+}
+.login {
+  margin-top: 100px;
+}
+.login .card {
+  background: rgba(0, 0, 0, .6);
+}
+.login label {
+  font-size: 16px;
+  color: #ccc; 
+}
+.login input {
+  font-size: 22px !important;
+  color: #fff !important;
+}
+.login button:hover {
+  padding: 0px 40px;
+  color: #fff !important;
+}
+    </style>
+</head>
+
+<body>
+    <div class="row login">
+        <div class="col s12 14 offset-14">
+            <div class="card">
+                <div class="card-action black white-text">
+                    <h3>Coffee Quiz Login</h3>
+                </div>
+                <div class="card-content">
+                    <div class="form-field">
+                        <label for="username">Username</label>
+                        <input type="text" id="username">
+                    </div><br>
+                    <div class="form-field">
+                        <label for="password">Password</label>
+                        <input type="password" id="passsword">
+                    </div><br>
+                    <div class="form-field">
+                        <label for="remember" id="remember">
+                        <input type="checkbox">Remember Me</label>
+                    </div><br>
+                    <div class="form-field center align">
+                        <button class="btn-large red">Login</button>
+                    </div><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
