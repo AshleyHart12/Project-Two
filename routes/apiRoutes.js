@@ -24,10 +24,11 @@ module.exports = function(app) {
     // POST route for new user
     app.post("/api/add", function (req, res) {
       console.log(req.body);
+      // res.json(req.body);
 
       CoffeeQuiz.create({
         email: req.body.email,
-        userName: req.body.username
+        userName: req.body.userName
       }).then(function (results) {
         res.json(results);
       });
