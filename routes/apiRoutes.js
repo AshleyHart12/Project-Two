@@ -5,33 +5,31 @@
 var CoffeeQuiz = require("../models/example.js");
 
 module.exports = function(app) {
-  // Get all games
   app.get("/api/all", function(req, res) {
-    CoffeeQuiz.findAll({}).then(function (results) {
+    CoffeeQuiz.findAll({}).then(function(results) {
       res.json(results);
     });
+  });
+  app.get("/", function(req, res) {
+    res.render("login");
+  });
+  app.get("/survey", function(req, res) {
+    res.render("survey");
+  });
+  app.get("/profile", function(req, res) {
+    res.render("profile");
+  });
 
-    app.get("/", function (req, res) {
-      res.render("login");
-    });
-    app.get("/survey", function (req, res) {
-      res.render("survey");
-    });
-    app.get("/profile", function (req, res) {
-      res.render("profile");
-    });
+  // POST route for new user
+  app.post("/api/add", function(req, res) {
+    console.log(req.body);
+    // res.json(req.body);
 
-    // POST route for new user
-    app.post("/api/add", function (req, res) {
-      console.log(req.body);
-      // res.json(req.body);
-
-      CoffeeQuiz.create({
-        email: req.body.email,
-        userName: req.body.userName
-      }).then(function (results) {
-        res.json(results);
-      });
+    CoffeeQuiz.create({
+      email: req.body.email,
+      userName: req.body.userName
+    }).then(function (results) {
+      res.json(results);
     });
   });
-}
+};
