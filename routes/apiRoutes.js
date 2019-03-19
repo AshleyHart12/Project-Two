@@ -17,7 +17,7 @@ module.exports = function(app) {
     res.render("profile");
   });
   app.get("/results", function(req, res) {
-    res.render("profile");
+    res.render("results");
   });
 
   // POST route for new user

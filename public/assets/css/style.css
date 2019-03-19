@@ -48,3 +48,85 @@ html {
   #backToResults {
     background-color: #2E1F0C;
 }
+
+
+/* RESULTS PAGE CSS */
+
+
+#titleResults {
+  background-color: #2E1F0C;
+  padding: 20px;
+
+}
+
+#title {
+  text-align: center;
+  color: white; 
+  
+}
+
+#words {
+   color: black;
+}
+
+
+#resultTabs {
+   background-image: url(../assets/images/heart.jpg)
+}
+
+body {
+   background-image: url(../assets/images/beans.jpg);
+   font-family: 'Noto Serif JP', serif;
+}
+
+#blackCoffee {
+   background-image: url(../assets/images/blackCoffee.jpeg);
+   background-repeat: no-repeat;
+   text-align: right;
+}
+
+#latte {
+    background-image: url(../assets/images/latte.png);
+    background-repeat: no-repeat;   
+    text-align: right; 
+}
+
+#cappuccino {
+    background-image: url(../assets/images/cappuccino.jpeg);
+    background-repeat: no-repeat;
+    text-align: right;
+}
+
+
+#chaiTea {
+   background-image: url(../assets/images/chaiTea.jpeg);
+   background-repeat: no-repeat;
+   text-align: right;
+}
+
+
+#espresso {
+   background-image: url(../assets/images/espresso.jpeg);
+   background-repeat: no-repeat;
+   text-align: right;
+}
+
+#caramel {
+   background-image: url(../assets/images/caramel.jpeg);
+   background-repeat: no-repeat;
+   text-align: right;
+}
+
+#userResult {
+   text-align: right;
+}
+
+#photo {
+   text-align: left;
+}
+
+#backToResults {
+   background-color: #2E1F0C;
+}
+
+
