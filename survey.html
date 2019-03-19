@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <!DOCTYPE html>
+        <html lang="en">
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+            <style>
+        html {
+          background-image: url("public/assets/images/beans.jpg");
+          background-size: cover;
+          color: #2E1F0C !important;
+        }
+        .bg{
+            background: #fff;
+            margin: 30px;
+       
+            
+        }
+        .jumbotron{
+            text-align: center;
+        }
+        input[type="radio"]{
+            -webkit-appearance: radio;
+        }
+
+      
+
+            </style>
+        </head>
+        
+        <div class="bg">
+        <div class="jumbotron" id="jumbo">
+                <h1>Coffee Personality Quiz!</h1>
+                <div id="howToPlay">
+                    <p>Take the quiz below to help us determine what type of coffee you are!</p>
+                    
+                </div>
+    
+        </div>
+        
+        <div id="radioButtons">
+            <h3>You love curling up with a good book on a rainy day.</h3>
+            <form name="frm1" action="" method="post">
+             
+             <label>  
+            <label>  <input type="radio" name="question1"  value="1" >
+              <span> 1 - This does not describe me at all.</span></label>
+                <br>
+                <label> <input type="radio" name="question1" value="2" >
+                <span> 2</span></label>
+                <br>
+                <label> <input type="radio" name="question1"  value="3" >
+                <span> 3</span></label>
+                <br>
+                <label> <input type="radio" name="question1"  value="4" >
+                <span> 4</span></label>
+                <br>
+                <label> <input type="radio" name="question1"  value="5" >
+                <span>  5 - This describes me perfectly.</span></label>
+            </label>
+               
+            <label>
+                <br><br>
+                <h3>You prefer reliable classics to new trends.</h3>
+                <label> <input type="radio" name="question2" id="q2a" value="1" />
+                <span>1 - This does not describe me at all.</span></label>
+                <br>
+                <label> <input type="radio" name="question2" id="q2b" value="2" />
+                <span>2</span></label>
+                <br>
+                <label> <input type="radio" name="question2" id="q2c" value="3" />
+                <span>3</span></label>
+                <br>
+                <label>  <input type="radio" name="question2" id="q2d" value="4" />
+                <span>4</span></label>
+                <br>
+                <label> <input type="radio" name="question2" id="q2e" value="5" />
+                <span>5 - This describes me perfectly.</span></label>
+                <br>
+            </label>
+                
+            <label> 
+                <br><br>
+                <h3>You hate to be boring.</h3>
+                <label> <input type="radio" name="question3" id="q3a" value="1" />
+                <span>1 - This does not describe me at all.</span></label>
+                <br>
+                <label>  <input type="radio" name="question3" id="q3b" value="2" />
+                <span>2</span></label>
+                <br>
+                <label>  <input type="radio" name="question3" id="q3c" value="3" />
+                <span>3</span></label>
+                <br>
+                <label> <input type="radio" name="question3" id="q3d" value="4" />
+                <span>4</span></label>
+                <br>
+                <label> <input type="radio" name="question3" id="q3e" value="5" />
+                <span>5 - This describes me perfectly.</span></label>
+                <br>
+            </label>
+                <label>  
+                <br><br>
+                <h3>You’re always cheerful and eager to spread a sweet smile.</h3>
+                <label> <input type="radio" name="question4" id="q4a" value="1" />
+                <span>1 - This does not describe me at all.</span></label>
+                <br>
+                <label>  <input type="radio" name="question4" id="q4b" value="2" />
+                <span>2</span></label>
+                <br>
+                <label>  <input type="radio" name="question4" id="q4c" value="3" />
+                <span>3</span></label>
+                <br>
+                <label>  <input type="radio" name="question4" id="q4d" value="4" />
+                <span>4</span></label>
+                <br>
+                <label> <input type="radio" name="question4" id="q4e" value="5" />
+                <span>5 - This describes me perfectly.</span></label>
+                <br>
+            </label>
+                <label> 
+                <br><br>
+                <h3>You consider yourself a night owl.</h3>
+                <label> <input type="radio" name="question5" id="q5a" value="1" />
+                <span>1 - This does not describe me at all.</span></label>
+                <br>
+                <label> <input type="radio" name="question5" id="q5b" value="2" />
+                <span>2</span></label>
+                <br>
+                <label>  <input type="radio" name="question5" id="q5c" value="3" />
+                <span>3</span></label>
+                <br>
+                <label>  <input type="radio" name="question5" id="q5d" value="4" />
+                <span>4</span></label>
+                <br>
+                <label>  <input type="radio" name="question5" id="q5e" value="5" />
+                <span>5 - This describes me perfectly.</span></label>
+                <br>
+            </label>
+                <label> 
+                <br><br>
+                <h3>You’d rather go clubbing than to an art museum.</h3>
+                <label> <input type="radio" name="question6" id="q6a" value="1" />
+                <span>1 - This does not describe me at all.</span></label>
+                <br>
+                <label> <input type="radio" name="question6" id="q6b" value="2" />
+                <span>2</span></label>
+                <br>
+                <label> <input type="radio" name="question6" id="q6c" value="3" />
+                <span>3</span></label>
+                <br>
+                <label> <input type="radio" name="question6" id="q6d" value="4" />
+                <span>4</span></label>
+                <br>
+                <label> <input type="radio" name="question6" id="q6e" value="5" />
+                <span>5 - This describes me perfectly.</span></label>
+                <br>
+            </label>
+        
+                <label> 
+                <br><br>
+                <h3>You never make plans without consulting your calendar first.</h3>
+                <label> <input type="radio" name="question7" id="q7a" value="1" />
+                <span>1 - This does not describe me at all.</span></label>
+                <br>
+                <label><input type="radio" name="question7" id="q7b" value="2" />
+                <span>2</span></label>
+                <br>
+                <label><input type="radio" name="question7" id="q7c" value="3" />
+                <span>3</span></label>
+                <br>
+                <label><input type="radio" name="question7" id="q7d" value="4" />
+                <span>4</span></label>
+                <br>
+                <label><input type="radio" name="question7" id="q7e" value="5" />
+                <span>5 - This describes me perfectly.</span></label>
+                <br>
+            </label>
+                <label> 
+                <br><br>
+                <h3>Your favorite meal of the day is breakfast. </h3>
+                <label><input type="radio" name="question8" id="q8a" value="1" />
+                <span>1 - This does not describe me at all.</span></label>
+                <br>
+                <label><input type="radio" name="question8" id="q8b" value="2" />
+                <span>2</span></label>
+                <br>
+                <label><input type="radio" name="question8" id="q8c" value="3" />
+                <span>3</span></label>
+                <br>
+                <label><input type="radio" name="question8" id="q8d" value="4" />
+                <span>4</span></label>
+                <br>
+                <label><input type="radio" name="question8" id="q8e" value="5" />
+                <span>5 - This describes me perfectly.</span></label>
+                <br>
+            </label>
+                <br><br>
+                <input type="button" value="Submit" class="btn btn-primary btn-lg" class="submitSurvey" onclick="checkQuiz();" />
+            </form>
+        </div>
+    </div>
+        
