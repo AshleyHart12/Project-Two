@@ -1,8 +1,5 @@
-// var db = require("../models");
-// //var moment = require("moment");
-// var request = require("request");
-// var nodemailer = require("nodemailer");
 var CoffeeQuiz = require("../models/example.js");
+//var db = require("../public/js/app");
 
 module.exports = function(app) {
   app.get("/api/all", function(req, res) {
@@ -22,14 +19,19 @@ module.exports = function(app) {
 
   // POST route for new user
   app.post("/api/add", function(req, res) {
-    console.log(req.body);
+    //      console.log(req.body);
     // res.json(req.body);
 
     CoffeeQuiz.create({
+      userName: req.body.username,
       email: req.body.email,
-      userName: req.body.userName
-    }).then(function (results) {
+      coffeeType: "black",
+      location: req.body.location
+    }).then(function(results) {
       res.json(results);
     });
+  });
+  app.put("/api/add", function(req, res) {
+
   });
 };
