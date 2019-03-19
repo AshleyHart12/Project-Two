@@ -70,49 +70,49 @@ html {
 }
 
 
-#resultTabs {
-   background-image: url(../assets/images/heart.jpg)
-}
+/* #resultTabs {
+   background-image: url(/images/heart.jpg)
+} */
 
-body {
+/* body {
    background-image: url(../assets/images/beans.jpg);
    font-family: 'Noto Serif JP', serif;
-}
+} */
 
 #blackCoffee {
-   background-image: url(../assets/images/blackCoffee.jpeg);
+   background-image: url(../images/blackCoffee.jpeg);
    background-repeat: no-repeat;
    text-align: right;
 }
 
 #latte {
-    background-image: url(../assets/images/latte.png);
+    background-image: url(../images/latte.png);
     background-repeat: no-repeat;   
     text-align: right; 
 }
 
 #cappuccino {
-    background-image: url(../assets/images/cappuccino.jpeg);
+    background-image: url(../images/cappuccino.jpeg);
     background-repeat: no-repeat;
     text-align: right;
 }
 
 
 #chaiTea {
-   background-image: url(../assets/images/chaiTea.jpeg);
+   background-image: url(../images/chaiTea.jpeg);
    background-repeat: no-repeat;
    text-align: right;
 }
 
 
 #espresso {
-   background-image: url(../assets/images/espresso.jpeg);
+   background-image: url(../images/espresso.jpeg);
    background-repeat: no-repeat;
    text-align: right;
 }
 
 #caramel {
-   background-image: url(../assets/images/caramel.jpeg);
+   background-image: url(../images/caramel.jpeg);
    background-repeat: no-repeat;
    text-align: right;
 }
