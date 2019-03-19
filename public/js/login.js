@@ -1,4 +1,5 @@
-$("#createAccount").on("click", function() {
+
+$("#createAccount").on("click", function () {
   event.preventDefault();
 
   var todo = {
@@ -12,4 +13,5 @@ $("#createAccount").on("click", function() {
     alert("Adding an amazing Person!!");
   });
 });
+
 
