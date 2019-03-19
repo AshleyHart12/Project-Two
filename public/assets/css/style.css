@@ -1,0 +1,132 @@
+/* Survey css */
+
+body {
+  color: white;
+  font-family: 'Noto Serif JP', serif;
+}
+
+html {
+    background-image: url("/assets/images/background.jpg");
+    background-repeat: none;
+    color: #fff; 
+  }
+  .login {
+    margin-top: 100px;
+  }
+  .login .card {
+    background: rgba(0, 0, 0, .6);
+  }
+  .login label {
+    font-size: 16px;
+    color: #ccc; 
+  }
+  .login input {
+    font-size: 22px !important;
+    color: #fff !important;
+  }
+  .login button:hover {
+    padding: 0px 40px;
+    color: #fff !important;
+  } 
+
+  setup {
+      /* this is a test */
+  }
+
+  #fullBackground {
+    background-color: #2E1F0C;
+    
+  }
+
+  #questionContainer {
+    background-color: white;
+    color: #2E1F0C;
+    
+    text-align: center;
+  }
+
+  #backToResults {
+    background-color: #2E1F0C;
+}
+
+
+/* RESULTS PAGE CSS */
+
+
+#titleResults {
+  background-color: #2E1F0C;
+  padding: 20px;
+
+}
+
+#title {
+  text-align: center;
+  color: white; 
+  
+}
+
+#words {
+   color: black;
+}
+
+
+#resultTabs {
+   background-image: url(../assets/images/heart.jpg)
+}
+
+body {
+   background-image: url(../assets/images/beans.jpg);
+   font-family: 'Noto Serif JP', serif;
+}
+
+#blackCoffee {
+   background-image: url(../assets/images/blackCoffee.jpeg);
+   background-repeat: no-repeat;
+   text-align: right;
+}
+
+#latte {
+    background-image: url(../assets/images/latte.png);
+    background-repeat: no-repeat;   
+    text-align: right; 
+}
+
+#cappuccino {
+    background-image: url(../assets/images/cappuccino.jpeg);
+    background-repeat: no-repeat;
+    text-align: right;
+}
+
+
+#chaiTea {
+   background-image: url(../assets/images/chaiTea.jpeg);
+   background-repeat: no-repeat;
+   text-align: right;
+}
+
+
+#espresso {
+   background-image: url(../assets/images/espresso.jpeg);
+   background-repeat: no-repeat;
+   text-align: right;
+}
+
+#caramel {
+   background-image: url(../assets/images/caramel.jpeg);
+   background-repeat: no-repeat;
+   text-align: right;
+}
+
+#userResult {
+   text-align: right;
+}
+
+#photo {
+   text-align: left;
+}
+
+#backToResults {
+   background-color: #2E1F0C;
+}
+
+

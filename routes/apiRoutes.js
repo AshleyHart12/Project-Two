@@ -1,36 +1,40 @@
-// var db = require("../models");
-// //var moment = require("moment");
-// var request = require("request");
-// var nodemailer = require("nodemailer");
 var CoffeeQuiz = require("../models/example.js");
+//var db = require("../public/js/app");
 
 module.exports = function(app) {
-  // Get all games
   app.get("/api/all", function(req, res) {
-    CoffeeQuiz.findAll({}).then(function (results) {
+    CoffeeQuiz.findAll({}).then(function(results) {
       res.json(results);
     });
+  });
+  app.get("/", function(req, res) {
+    res.render("login");
+  });
+  app.get("/survey", function(req, res) {
+    res.render("survey");
+  });
+  app.get("/profile", function(req, res) {
+    res.render("profile");
+  });
+  app.get("/results", function(req, res) {
+    res.render("results");
+  });
 
-    app.get("/", function (req, res) {
-      res.render("login");
-    });
-    app.get("/survey", function (req, res) {
-      res.render("survey");
-    });
-    app.get("/profile", function (req, res) {
-      res.render("profile");
-    });
+  // POST route for new user
+  app.post("/api/add", function(req, res) {
+    //      console.log(req.body);
+    // res.json(req.body);
 
-    // POST route for new user
-    app.post("/api/add", function (req, res) {
-      console.log(req.body);
-
-      CoffeeQuiz.create({
-        email: req.body.email,
-        userName: req.body.username
-      }).then(function (results) {
-        res.json(results);
-      });
+    CoffeeQuiz.create({
+      userName: req.body.username,
+      email: req.body.email,
+      coffeeType: "black",
+      location: req.body.location
+    }).then(function(results) {
+      res.json(results);
     });
   });
-}
+  app.put("/api/add", function(req, res) {
+
+  });
+};

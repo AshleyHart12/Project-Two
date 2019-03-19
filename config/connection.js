@@ -4,7 +4,10 @@ let Sequelize = require('sequelize')
 
 console.log(process.env.DB_DATABASE)
 
-let sequelize = new Sequelize("coffee_quiz_db", "root", "", {
+
+=======
+let sequelize = new Sequelize("coffee_quiz_db", "root", "Noles08!!", {
+
     host: 'localhost',
     port: 3306,
     dialect: 'mysql',

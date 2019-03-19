@@ -1,13 +1,8 @@
-/* .list-group-item { */
-  line-height: 2.5;
-} */
-
-
 /* Login page css */
 html {
-  background-image: url("../public/assets/images/beans.jpg");
-  background-size: cover;
-  color: #fff !important;
+  background-image: url("../../public/assets/images/background.jpg") !important;
+  /* background-size: cover; */
+  /* color: #fff !important; */
 }
 .login {
   margin-top: 100px;
@@ -26,4 +21,4 @@ html {
 .login button:hover {
   padding: 0px 40px;
   color: #fff !important;
-}
+} 

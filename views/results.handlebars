@@ -1,0 +1,232 @@
+{{!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="public/styles/resultsCSS.css" rel="stylesheet" type="text/css">
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP" rel="stylesheet">
+  <!-- JQUERY -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--Materialize Link-->
+  <link type="text/css" rel="stylesheet" href="public/styles/materialize/css/materialize.min.css" media="screen,projection" />
+  <script src="public/styles/materialize/js/materialize.js"></script>
+
+  <title>Coffee Quiz</title>
+
+</head>
+
+<body> --}}
+
+    <form action ="/results", method="POST"></form>
+
+  <div class="container" id="titleResults">
+
+    <!-- ROW FOR TITLE -->
+    <div class="row" id="title">
+      <div class="col s12">
+        <h3>What's Your Flavor?</h3>
+      </div>
+    </div>
+
+    <!-- ROW FOR USER'S RESULT AND COFFEE DESCRIPTION -->
+    <div class="container">
+      <div class="row" id="title">
+
+
+        <div class="col s12">
+          <!-- <h2 class="header">Horizontal Card</h2> -->
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="/assets/images/resultVerticalPicture.jpg" width="200" height="200">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content" id="words">
+                <h5 id="#username"> </h5><h5 id="#coffeeResult">Cappuccino</h5>
+                <hr>
+                <br>
+                <h6 id="#resultDescription">This is a fun description of how your results relate to your personality :)</h6>
+                <h6>Want to try again? <a class="waves-effect waves-light btn-small" id="backToResults" href="views/survey.handlebars">Let's go!</a></h6>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div> <!-- END RESULTS TOP ROW -->
+    </div>
+
+
+    <!-- ROW TO HOLD CARD FOR EACH RESULT CHOICE -->
+    
+      <div class="row">
+        <div class="col s4">
+          <div class="card">
+            <div class="card-content" id="blackCoffee">
+              <h4>Black Coffee</h4>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a href="description">Description</a></li>
+                <li class="tab"><a href="userMatches">Matches</a></li>
+
+              </ul>
+            </div>
+
+            <div class="card-content grey lighten-4">
+              <div id="description">Just like black coffee, you’re a timeless classic. Your friends love you for your
+                sometimes-acidic wit, but they know you’re always there for them when they need youー morning or night.
+              </div>
+              <div id="userMatches">Username1</div>
+              <div id="userMatches">Username2</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col s4">
+          <div class="card">
+            <div class="card-content" id="latte">
+              <h4>Vanilla Latte</h4>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a href="#description">Description
+                  </a></li>
+                <li class="tab"><a href="#userMatches">Matches</a></li>
+
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="description">You’re always a sweet and comforting presence. All of your friends know who to
+                reach out to for a cozy evening spent relaxing at home.</div>
+              <div id="userMatches">Username2</div>
+              <div id="userMatches">Username3</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="card">
+            <div class="card-content" id="cappuccino">
+              <h4>Cappuccino</h4>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a href="#description">Description</a></li>
+                <li class="tab"><a href="#userMatches">Matches</a></li>
+
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="description">You’re perky without being overbearing, and know how to keep your life just the
+                right amount of busy. You love your mornings, and are always the first to propose a brunch get-together
+                over a dinner meet-up.</div>
+              <div id="userMatches">Username2</div>
+              <div id="userMatches">Username3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col s4">
+          <div class="card">
+            <div class="card-content" id="chaiTea">
+              <h4>Chai Tea</h4>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a href="#description">Description
+                  </a></li>
+                <li class="tab"><a href="#userMatches">Matches</a></li>
+
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="description">You’re a person who marches to the beat of your own drummer, and your friends love
+                to follow along with your unique ideas. You can choose to be sweet or spicy, depending on your mood,
+                but everyone knows you’re always a delight.</div>
+              <div id="userMatches">Username2</div>
+              <div id="userMatches">Username3</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col s4">
+          <div class="card">
+            <div class="card-content" id="espresso">
+              <h4>Espresso</h4>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a href="#Description">Description
+                  </a></li>
+                <li class="tab"><a href="#userMatches">Matches</a></li>
+
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="Description">Watch out world! You’re bubbling with energy and always ready for something new.
+                Your enthusiasm is infectious, and you perk up the whole room just by being there.</div>
+              <div id="userMatches">Username2</div>
+              <div id="userMatches">Username3</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col s4">
+          <div class="card">
+            <div class="card-content" id="caramel">
+              <h4>Caramel Macchiato</h4>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab col s6"><a href="#description">Description</a></li>
+                <li class="tab col s6"><a href="#userMatches">Matches</a></li>
+
+              </ul>
+            </div>
+
+            <div class="card-content grey lighten-4" id="userMatches">
+              <div id="description">You know how to balance your life and like to keep everything in its place. Despite
+                your dedication to neatness and your sophisticated vibe, you’ve got a fun, sweet side for those who get
+                to know you.</div>
+              <div id="userMatches">Username2</div>
+              <div id="userMatches">Username3</div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+      <!-- ROW FOR GOOGLE MAP API -->
+      <div class="row">
+        <div class="col 12">
+
+        </div>
+      </div>
+      <!-- END FULL CONTAINER -->
+    </div>
+
+
+
+
+{{!--   
+<script src="public/assets/js/resultsPage.js"></script>
+</body>
+
+</html> --}}

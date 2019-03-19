@@ -1,25 +1,17 @@
-var handleCreateAccount = () => {
-    event.preventDefault();
-  
-    var username = $('#createUsername').val().trim();
-    var name = $('#name').val().trim();
-    var password = $('#createPassword').val();
-    var age = $('#age').val().trim();
-    var location = $('#location').val().trim();
-  
-    addUser({
-      username: username,
-      name: name,
-      password: password,
-      age: age,
-      location: location
-    });
-  
-  
-  }
-  
-  let addUser = (userData) => {
-    $.post('/create-account', userData);
-  }
-  
-  $('#createAccount').on('click', handleCreateAccount);
+
+$("#createAccount").on("click", function () {
+  event.preventDefault();
+
+  var todo = {
+    username: $("#name").val().trim(),
+    email: $("#email").val().trim()
+    // location: $("#location").val().trim()
+  };
+
+  $.post("/api/add", todo).then(function(data) {
+    console.log(data);
+    alert("Adding an amazing Person!!");
+  });
+});
+
+
