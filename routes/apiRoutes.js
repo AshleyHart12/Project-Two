@@ -16,6 +16,9 @@ module.exports = function(app) {
   app.get("/profile", function(req, res) {
     res.render("profile");
   });
+  app.get("/results", function(req, res) {
+    res.render("profile");
+  });
 
   // POST route for new user
   app.post("/api/add", function(req, res) {
