@@ -1,7 +1,13 @@
-/* Login page css */
+/* Survey css */
+
+body {
+  color: white;
+  font-family: 'Noto Serif JP', serif;
+}
+
 html {
     background-image: url("/assets/images/background.jpg");
-    background-size: cover; 
+    background-repeat: none;
     color: #fff; 
   }
   .login {
@@ -26,3 +32,19 @@ html {
   setup {
       /* this is a test */
   }
+
+  #fullBackground {
+    background-color: #2E1F0C;
+    
+  }
+
+  #questionContainer {
+    background-color: white;
+    color: #2E1F0C;
+    
+    text-align: center;
+  }
+
+  #backToResults {
+    background-color: #2E1F0C;
+}
