@@ -10,5 +10,8 @@ $("#createAccount").on("click", function () {
   $.post("/api/add", todo).then(function (data) {
     console.log(data);
     alert("Adding an amazing Person!!");
+
   });
+  $.post("/survey");
+
 });
