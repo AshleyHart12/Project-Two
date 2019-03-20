@@ -143,3 +143,12 @@ html {
 input[type="radio"]{
     -webkit-appearance: radio;
 }
+
+#questionContainer {
+  background-color: white;
+
+}
+
+#questions {
+  color: #2E1F0C;
+}
