@@ -15,24 +15,22 @@ $("#backToResults").on("click", function() {
 function getMatch() {
   var quizData = {
     scores: [
-      $("#question1").val(),
-      $("#question2").val(),
-      $("#question3").val(),
-      $("#question4").val(),
-      $("#question5").val(),
-      $("#question6").val(),
-      $("#question7").val(),
-      $("#question8").val()
+      $("#q1").val(),
+      $("#q2").val(),
+      $("#q3").val(),
+      $("#q4").val(),
+      $("#q5").val(),
+      $("#q6").val(),
+      $("#q7").val(),
+      $("#q8").val()
     ]
   };
   console.log("Beginning to test for matches.....");
   console.log("My scores are: " + quizData.scores);
-  
+
   var scoresArray = [];
-  var coffeeCount = 0;
   var bestMatch = 0;
 
-  console.log(userData);
   for (var i = 0; i < scoresArray.length; i++) {
     var scoresDiff = 0;
 
@@ -44,6 +42,7 @@ function getMatch() {
 
     //push results into scoresArray
     scoresArray.push(scoresDiff);
+    console.log("My scores are:");
   }
 
   for (var i = 0; i < scoresArray.length; i++) {
@@ -53,9 +52,7 @@ function getMatch() {
   }
 
   //return bestMatch data
-  var coffeeMatch = coffeesArray[bestMatch];
 }
-
 
 var coffeeList = [
   {
