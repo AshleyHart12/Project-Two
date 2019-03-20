@@ -1,6 +1,7 @@
 $("#backToResults").on("click", function() {
   event.preventDefault();
   console.log("I've been clicked.");
+
   getMatch();
 
   function updatesurvey(CoffeeQuizes) {
@@ -13,55 +14,56 @@ $("#backToResults").on("click", function() {
 });
 
 function getMatch() {
-  var quizData = {
-    scores: [
-      $("#q1").val(),
-      $("#q2").val(),
-      $("#q3").val(),
-      $("#q4").val(),
-      $("#q5").val(),
-      $("#q6").val(),
-      $("#q7").val(),
-      $("#q8").val()
-    ]
-  };
+  var quizData = [
+    $("#q1").val(),
+    $("#q2").val(),
+    $("#q3").val(),
+    $("#q4").val(),
+    $("#q5").val(),
+    $("#q6").val(),
+    $("#q7").val(),
+    $("#q8").val()
+  ];
+
   console.log("Beginning to test for matches.....");
-  console.log("My scores are: " + quizData.scores);
-
-  var scoresArray = [];
+  console.log("My scores are: " + quizData);
   var bestMatch = 0;
+  var scoresArray = [];
 
-  for (var i = 0; i < scoresArray.length; i++) {
+  for (var i = 0; i < quizData.length; i++) {
     var scoresDiff = 0;
-
+    console.log("Running outer loop...");
     for (var j = 0; j < coffeeList.length; j++) {
+      console.log("Running inner loop...");
       scoresDiff += Math.abs(
-        parseInt(coffeesArray[i].scores[j]) - parseInt(coffeeList[j])
+        parseInt(quizData[i]) - parseInt(coffeeList[j].scores[j])
       );
+      console.log("The difference is: " + scoresDiff);
     }
-
     //push results into scoresArray
     scoresArray.push(scoresDiff);
-    console.log("My scores are:");
+    console.log("My scores are:" + scoresArray);
   }
 
   for (var i = 0; i < scoresArray.length; i++) {
     if (scoresArray[i] <= scoresArray[bestMatch]) {
       bestMatch = i;
+      console.log(bestMatch);
     }
   }
-
-  //return bestMatch data
+  console.log(bestMatch);
+  console.log(coffeeList[parseInt(bestMatch)].name);
+  return coffeeList[parseInt(bestMatch)].name;
 }
 
 var coffeeList = [
   {
     name: "Black Coffee",
-    scores: ["3", "5", "1", "1", "2", "1", "4", "4"]
+    scores: [3, 5, 1, 1, 2, 1, 4, 4]
   },
   {
     name: "Vanilla Latte",
-    scores: ["5", "3", "2", "4", "2", "2", "2", "3"]
+    scores: ["5", "3", "2", "4", "2", "2", 2, 3]
   },
   {
     name: "Cappuccino",
@@ -76,7 +78,7 @@ var coffeeList = [
     scores: ["1", "2", "5", "2", "5", "5", "1", "2"]
   },
   {
-    name: "Black Coffee",
+    name: "Caramel Macchiato",
     scores: ["2", "2", "1", "4", "2", "5", "3", "4"]
   }
 ];
