@@ -1,5 +1,5 @@
-
-$("#createAccount").on("click", function () {
+//var app = require("express");
+$("#createAccount").on("click", function() {
   event.preventDefault();
 
   var todo = {
@@ -7,18 +7,10 @@ $("#createAccount").on("click", function () {
     email: $("#email").val().trim()
     // location: $("#location").val().trim()
   };
-
-  $.post("/api/add", todo).then(function(data) {
+    $.post("/api/add", todo).then(function (data) {
     console.log(data);
     alert("Adding an amazing Person!!");
-
+    window.location = "/survey";
   });
-<<<<<<< HEAD
-  $.post("/survey");
 
 });
-=======
-});
-
-
->>>>>>> 9d6a3b58be49468bba6bbd82605675ff4bf390f6
