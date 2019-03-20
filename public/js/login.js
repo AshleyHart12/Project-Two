@@ -1,5 +1,5 @@
-
-$("#createAccount").on("click", function () {
+//var app = require("express");
+$("#createAccount").on("click", function() {
   event.preventDefault();
 
   var todo = {
@@ -7,11 +7,10 @@ $("#createAccount").on("click", function () {
     email: $("#email").val().trim()
     // location: $("#location").val().trim()
   };
-
-  $.post("/api/add", todo).then(function(data) {
+    $.post("/api/add", todo).then(function (data) {
     console.log(data);
     alert("Adding an amazing Person!!");
+    window.location = "/survey";
   });
+
 });
-
-
