@@ -1,6 +1,7 @@
 var CoffeeQuiz = require("../models/example.js");
 //var db = require("../public/js/app");
 
+
 module.exports = function(app) {
   app.get("/api/all", function(req, res) {
     CoffeeQuiz.findAll({}).then(function(results) {
@@ -19,6 +20,8 @@ module.exports = function(app) {
   app.get("/results", function(req, res) {
     res.render("results");
   });
+
+
 
   // POST route for new user
   app.post("/api/add", function(req, res) {

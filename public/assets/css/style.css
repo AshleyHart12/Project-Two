@@ -130,3 +130,16 @@ html {
 }
 
 
+/*SURVEY PAGE CSS*/
+.bg{
+    background: #fff;
+    margin: 30px;
+
+    
+}
+.jumbotron{
+    text-align: center;
+}
+input[type="radio"]{
+    -webkit-appearance: radio;
+}
