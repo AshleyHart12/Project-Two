@@ -11,6 +11,12 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/survey", function(req, res) {
+    // res.sendFile(path.join(__dirname, "../public/views/survey.handlebars"))
+    res.render("/survey");
+});
+
+
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
     CoffeeQuiz.findOne({ where: { id: req.params.id } }).then(function(dbExample) {

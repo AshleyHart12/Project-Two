@@ -5,7 +5,9 @@ let Sequelize = require('sequelize')
 console.log(process.env.DB_DATABASE)
 
 
+
 let sequelize = new Sequelize("coffee_quiz_db", "root", "password", {
+
 
     host: 'localhost',
     port: 3306,
