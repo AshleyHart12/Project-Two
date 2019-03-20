@@ -1,17 +1,16 @@
-<div class="bg">
-    <div class="jumbotron" id="jumbo">
-        <h1>Coffee Personality Quiz!</h1>
-        <div id="howToPlay">
-            <p>Take the quiz below to help us determine what type of coffee you are!</p>
+<div class="container" id="titleResults">
 
-        </div>
-
+ <div class="row" id="title">
+      <div class="col s12">
+        <h3>Coffee Personality Quiz</h3>
+      </div>
     </div>
 
+    <div class="container" id="questionContainer">
     <div id="radioButtons">
         <label>
             <br><br>
-            <h3>You love curling up with a good book on a rainy day.</h3>
+            <h3 id="questions">You love curling up with a good book on a rainy day.</h3>
             <select data-placeholder="" class="browser-default" id="q1">
                 <label>
                     <option value="1" />
@@ -37,7 +36,7 @@
         </select>
         <label>
             <br><br>
-            <h3>You prefer reliable classics to new trends.</h3>
+            <h3 id="questions">You prefer reliable classics to new trends.</h3>
             <select data-placeholder="" class="browser-default" id="q2">
                 <label>
                     <option value="1" />
@@ -63,7 +62,7 @@
         </select>
         <label>
             <br><br>
-            <h3>You hate to be boring.</h3>
+            <h3 id="questions">You hate to be boring.</h3>
             <select data-placeholder="" class="browser-default" id="q3">
                 <label>
                     <option value="1" />
@@ -90,7 +89,7 @@
         <label>
 
             <br><br>
-            <h3>You’re always cheerful and eager to spread a sweet smile.</h3>
+            <h3 id="questions">You’re always cheerful and eager to spread a sweet smile.</h3>
             <select data-placeholder="" class="browser-default" id="q4">
                 <label>
                     <option value="1" />
@@ -117,7 +116,7 @@
         <label>
 
             <br><br>
-            <h3>You consider yourself a night owl.</h3>
+            <h3 id="questions">You consider yourself a night owl.</h3>
             <select data-placeholder="" class="browser-default" id="q5">
                 <label>
                     <option value="1" />
@@ -143,7 +142,7 @@
         </select>
         <label>
             <br><br>
-            <h3>You’d rather go clubbing than to an art museum.</h3>
+            <h3 id="questions">You’d rather go clubbing than to an art museum.</h3>
             <select data-placeholder="" class="browser-default" id="q6">
                 <label>
                     <option value="1" />
@@ -169,7 +168,7 @@
         </select>
         <label>
             <br><br>
-            <h3>You never make plans without consulting your calendar first.</h3>
+            <h3 id="questions">You never make plans without consulting your calendar first.</h3>
             <select data-placeholder="" class="browser-default" id="q7">
                 <label>
                     <option value="1" />
@@ -195,7 +194,7 @@
         </select>
         <label>
             <br><br>
-            <h3>Your favorite meal of the day is breakfast. </h3>
+            <h3 id="questions">Your favorite meal of the day is breakfast. </h3>
             <select data-placeholder="" class="browser-default" id="q8">
                 <label>
                     <option value="1" />
@@ -221,8 +220,11 @@
         </select>
         <br><br>
         <a class="waves-effect waves-light btn-small" id="backToResults">Submit</a>
+        <br>
+        <br>
 
     </div>
+    </div> <!-- END QUESTION CONTAINER
 
 </div>
 

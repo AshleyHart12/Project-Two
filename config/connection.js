@@ -6,7 +6,7 @@ console.log(process.env.DB_DATABASE)
 
 
 
-let sequelize = new Sequelize("coffee_quiz_db", "root", "password", {
+let sequelize = new Sequelize("coffee_quiz_db", "root", "Noles08!!", {
 
 
     host: 'localhost',
