@@ -2,15 +2,20 @@ $("#backToResults").on("click", function() {
   event.preventDefault();
   console.log("I've been clicked.");
 
-  getMatch();
+  var coffeeMatch = getMatch();
 
   function updatesurvey(CoffeeQuizes) {
+   
+  console.log("I will record this coffee to the database: " + coffeeMatch);
     $.ajax({
       method: "PUT",
       url: "/api/all",
-      coffeeType: "Will get result once javascript has been written"
-    }).then(getsurvey);
+      coffeeType: coffeeMatch
+    }).then(function(data) {
+      window.location = "/results";
+    });
   }
+  updatesurvey();
 });
 
 function getMatch() {
