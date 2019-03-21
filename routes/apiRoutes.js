@@ -23,6 +23,7 @@ module.exports = function(app) {
 
 
 
+
   // POST route for new user
   app.post("/api/add", function(req, res) {
     //      console.log(req.body);
@@ -37,7 +38,21 @@ module.exports = function(app) {
       res.json(results);
     });
   });
-  app.put("/api/add", function(req, res) {
 
-  });
+
+  // app.put("/api/add", function(req, res) {
+
+  // });
+
+//  app.get("/api/results/:id", function(req, res) {
+//    db.CoffeeQuiz.findOne({
+//     where: {
+//       id: req.params.id
+//     },
+//     include: [db.post]
+//    }).then(function(dbCoffeeQuiz) {
+//      res.join(dbCoffeeQuiz);
+//    });
+//  });
+
 };

@@ -7,6 +7,8 @@ var CoffeeQuiz = sequelize.define("CoffeeQuizes", {
   coffeeType: Sequelize.STRING
 });
 
+
+
 CoffeeQuiz.sync();
 
 module.exports = CoffeeQuiz;
