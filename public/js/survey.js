@@ -15,14 +15,18 @@ $("#backToResults").on("click", function() {
 
 
       coffeeType: coffeeMatch
-<<<<<<< HEAD
+
     }).then(function(data) {
       window.location = "/results";
     });
 
-=======
+
     }).then(loadResults());
->>>>>>> 3e66a9131ca651406d91ba3900d797d49a63fadb
+
+
+    }).then(loadResults());
+
+
   }
   updatesurvey();
 });
