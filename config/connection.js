@@ -2,13 +2,13 @@
 require('dotenv').config()
 let Sequelize = require('sequelize')
 
-console.log(process.env.DB_DATABASE)
+//console.log(process.env.DB_DATABASE)
 
-
-
-let sequelize = new Sequelize("coffee_quiz_db", "root", "Noles08!!", {
-
-
+let sequelize;
+if (process.env.JAWSDB_URL) {
+  sequelize = new Sequelize(process.env.JAWSDB_URL)
+} else {
+  sequelize = new Sequelize("coffee_quiz_db", "root", "Kodiak2129!", {
     host: 'localhost',
     port: 3306,
     dialect: 'mysql',
@@ -17,7 +17,8 @@ let sequelize = new Sequelize("coffee_quiz_db", "root", "Noles08!!", {
         min: 0,
         idle: 10000
     }
-})
+  });
+}
 
 sequelize
   .authenticate()
@@ -28,4 +29,4 @@ sequelize
     console.error('Unable to connect to the database:', err);
   });
 
-module.exports = sequelize
+module.exports = sequelize;

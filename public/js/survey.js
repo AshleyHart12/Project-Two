@@ -3,7 +3,7 @@ $("#backToResults").on("click", function() {
   console.log("I've been clicked.");
   var coffeeMatch = getMatch();
   function loadResults() {
-    // window.location.assign("/results");
+    window.location.assign("/results");
   }
   function updatesurvey(CoffeeQuizes) {
     var newMatch = getMatch();
@@ -11,8 +11,8 @@ $("#backToResults").on("click", function() {
     $.ajax({
       method: "POST",
       url: "/api/add",
-      data: newMatch
-    }).then(loadResults());
+      coffeeType: newMatch
+    }).then(loadResults);
   }
   updatesurvey();
 });
