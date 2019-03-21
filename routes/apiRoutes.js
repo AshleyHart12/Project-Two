@@ -45,7 +45,7 @@ module.exports = function(app) {
   // });
 
 //  app.get("/api/results/:id", function(req, res) {
-//    db.CoffeeQuiz.findOne({
+//    CoffeeQuiz.findOne({
 //     where: {
 //       id: req.params.id
 //     },
