@@ -5,8 +5,7 @@ $("#backToResults").on("click", function() {
   var coffeeMatch = getMatch();
 
   function updatesurvey(CoffeeQuizes) {
-   
-  console.log("I will record this coffee to the database: " + coffeeMatch);
+    console.log("I will record this coffee to the database: " + coffeeMatch);
     $.ajax({
       method: "PUT",
       url: "/api/all",
@@ -61,8 +60,12 @@ function getMatch() {
   console.log(bestMatch);
   var bestMatchIndex = parseInt(bestMatch);
   console.log(bestMatchIndex);
-  console.log(coffeeList[parseInt(bestMatchIndex)].name);
-  return coffeeList[parseInt(bestMatchIndex)].name;
+  //console.log(coffeeList[parseInt(bestMatchIndex)].name);
+  if (bestMatchIndex >= 6) {
+    return coffeeList[5].name;
+  } else {
+    return coffeeList[parseInt(bestMatchIndex)].name;
+  }
 }
 
 var coffeeList = [
