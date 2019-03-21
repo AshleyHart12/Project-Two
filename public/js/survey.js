@@ -4,19 +4,25 @@ $("#backToResults").on("click", function() {
 
   var coffeeMatch = getMatch();
 
+  function loadResults() {
+    window.location.assign("/results");
+  }
   function updatesurvey(CoffeeQuizes) {
-   
-  console.log("I will record this coffee to the database: " + coffeeMatch);
+    console.log("I will record this coffee to the database: " + coffeeMatch);
     $.ajax({
       method: "PUT",
       url: "/api/all",
 
 
       coffeeType: coffeeMatch
+<<<<<<< HEAD
     }).then(function(data) {
       window.location = "/results";
     });
 
+=======
+    }).then(loadResults());
+>>>>>>> 3e66a9131ca651406d91ba3900d797d49a63fadb
   }
   updatesurvey();
 });
@@ -64,8 +70,12 @@ function getMatch() {
   console.log(bestMatch);
   var bestMatchIndex = parseInt(bestMatch);
   console.log(bestMatchIndex);
-  console.log(coffeeList[parseInt(bestMatchIndex)].name);
-  return coffeeList[parseInt(bestMatchIndex)].name;
+  //console.log(coffeeList[parseInt(bestMatchIndex)].name);
+  if (bestMatchIndex >= 6) {
+    return coffeeList[5].name;
+  } else {
+    return coffeeList[parseInt(bestMatchIndex)].name;
+  }
 }
 
 var coffeeList = [

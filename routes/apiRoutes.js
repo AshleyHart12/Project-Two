@@ -44,15 +44,13 @@ module.exports = function(app) {
 
   // });
 
-//  app.get("/api/results/:id", function(req, res) {
-//    CoffeeQuiz.findOne({
-//     where: {
-//       id: req.params.id
-//     },
-//     include: [db.post]
-//    }).then(function(dbCoffeeQuiz) {
-//      res.join(dbCoffeeQuiz);
-//    });
-//  });
+ app.get("/api/all/:id", function(req, res) {
+   CoffeeQuiz.findOne({
+    where: {
+      id: req.params.id
+    }).then(function(CoffeeQuiz) {
+     res.join(CoffeeQuiz);
+   });
+ });
 
 };
