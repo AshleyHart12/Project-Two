@@ -3,14 +3,21 @@ $("#backToResults").on("click", function() {
   console.log("I've been clicked.");
   var coffeeMatch = getMatch();
   function loadResults() {
-    window.location.assign("/results");
+    // window.location.assign("/results");
   }
   function updatesurvey(CoffeeQuizes) {
+    var newMatch = getMatch();
     console.log("I will record this coffee to the database: " + coffeeMatch);
     $.ajax({
+<<<<<<< HEAD
       method: "PUT",
       url: "/api/all",
       coffeeType: coffeeMatch
+=======
+      method: "POST",
+      url: "/api/add",
+      data: newMatch
+>>>>>>> master
     }).then(loadResults());
   }
   updatesurvey();
@@ -44,7 +51,7 @@ function getMatch() {
     }
     //push results into scoresArray
     scoresArray.push(scoresDiff);
-    console.log("My scores are:" + scoresArray);
+    console.log("My scores are: " + scoresArray);
   }
   for (var i = 0; i < scoresArray.length; i++) {
     if (scoresArray[i] <= scoresArray[bestMatch]) {
@@ -52,14 +59,16 @@ function getMatch() {
       console.log(bestMatch);
     }
   }
-  console.log(bestMatch);
+  console.log("This is the index " + bestMatch);
   var bestMatchIndex = parseInt(bestMatch);
   console.log(bestMatchIndex);
   //console.log(coffeeList[parseInt(bestMatchIndex)].name);
   if (bestMatchIndex >= 6) {
     return coffeeList[5].name;
   } else {
+    console.log("Line 64 " + coffeeList[parseInt(bestMatchIndex)].name);
     return coffeeList[parseInt(bestMatchIndex)].name;
+   
   }
 }
 var coffeeList = [

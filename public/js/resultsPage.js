@@ -1,29 +1,27 @@
 
 
-$("#backToResults").on("click", function() {
-  var renderUserName = $("#name");
-  var renderCoffeeType = ("USER RESULT")
 
-  $("#username").append(renderUserName);
-  $("#resultDescription").append(renderCoffeeType);
+// $("#backToResults").on("click", function() {
+//   var renderUserName = $("#name");
+//   var renderCoffeeType = ("USER RESULT")
 
-
-});
+//   $("#username").append(renderUserName);
+//   $("#resultDescription").append(renderCoffeeType);
 
 
+// });
 
-// $("#submit").on("click", "", addUserResult);
+var userName = $("")
 
-// function addUserResult(event){
-//   event.preventDefault();
-//   if(!renderUserName.val().trim().trim()) {
-//     return;
-//   }
-//   addResult({
-//     name: renderUserName
-//     .val().trim()
-//   });
-// }
+
+
+function addUserResult(data){
+  $.get("/api/all/:id", function(data) {
+    var renderUserName = $();
+    $("#username").append(renderUserName);
+  })
+  
+}
 
 
 
