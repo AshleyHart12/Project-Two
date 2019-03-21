@@ -1,7 +1,6 @@
 var CoffeeQuiz = require("../models/example.js");
 //var db = require("../public/js/app");
 
-
 module.exports = function(app) {
   app.get("/api/all", function(req, res) {
     CoffeeQuiz.findAll({}).then(function(results) {
@@ -21,9 +20,6 @@ module.exports = function(app) {
     res.render("results");
   });
 
-
-
-
   // POST route for new user
   app.post("/api/add", function(req, res) {
     //      console.log(req.body);
@@ -37,20 +33,15 @@ module.exports = function(app) {
     }).then(function(results) {
       res.json(results);
     });
+
+    app.get("/api/all/:id", function(req, res) {
+      CoffeeQuiz.findOne({
+        where: {
+          id: req.params.id
+        }.then(function(CoffeeQuiz) {
+          res.join(CoffeeQuiz);
+        })
+      });
+    });
   });
-
-
-  // app.put("/api/add", function(req, res) {
-
-  // });
-
- app.get("/api/all/:id", function(req, res) {
-   CoffeeQuiz.findOne({
-    where: {
-      id: req.params.id
-    }).then(function(CoffeeQuiz) {
-     res.join(CoffeeQuiz);
-   });
- });
-
 };
