@@ -36,8 +36,10 @@ function getMatch() {
     for (var j = 0; j < coffeeList.length; j++) {
       console.log("Running inner loop...");
       scoresDiff += Math.abs(
-        parseInt(quizData[i]) - parseInt(coffeeList[j].scores[j])
+        parseInt(quizData[i]) - parseInt(coffeeList[j].scores[i])
       );
+      console.log(quizData[i]);
+      console.log(coffeeList[j].scores[j]);
       console.log("The difference is: " + scoresDiff);
     }
     //push results into scoresArray
@@ -52,8 +54,10 @@ function getMatch() {
     }
   }
   console.log(bestMatch);
-  console.log(coffeeList[parseInt(bestMatch)].name);
-  return coffeeList[parseInt(bestMatch)].name;
+  var bestMatchIndex = parseInt(bestMatch);
+  console.log(bestMatchIndex);
+  console.log(coffeeList[parseInt(bestMatchIndex)].name);
+  return coffeeList[parseInt(bestMatchIndex)].name;
 }
 
 var coffeeList = [
@@ -63,22 +67,22 @@ var coffeeList = [
   },
   {
     name: "Vanilla Latte",
-    scores: ["5", "3", "2", "4", "2", "2", 2, 3]
+    scores: [5, 3, 2, 4, 2, 2, 2, 3]
   },
   {
     name: "Cappuccino",
-    scores: ["4", "4", "1", "2", "2", "2", "3", "5"]
+    scores: [4, 4, 1, 2, 2, 2, 3, 5]
   },
   {
     name: "Chai Tea",
-    scores: ["5", "1", "5", "3", "3", "1", "1", "3"]
+    scores: [5, 1, 5, 3, 3, 1, 1, 3]
   },
   {
     name: "Espresso",
-    scores: ["1", "2", "5", "2", "5", "5", "1", "2"]
+    scores: [1, 2, 5, 2, 5, 5, 1, 2]
   },
   {
     name: "Caramel Macchiato",
-    scores: ["2", "2", "1", "4", "2", "5", "3", "4"]
+    scores: [2, 2, 1, 4, 2, 5, 3, 4]
   }
 ];
