@@ -3,20 +3,30 @@ $("#backToResults").on("click", function() {
   console.log("I've been clicked.");
   var coffeeMatch = getMatch();
   function loadResults() {
-    // window.location.assign("/results");
+    window.location.assign("/results");
   }
   function updatesurvey(CoffeeQuizes) {
     var newMatch = getMatch();
     console.log("I will record this coffee to the database: " + coffeeMatch);
     $.ajax({
+<<<<<<< HEAD
+      method: "PUT",
+      url: "/api/all",
+      coffeeType: coffeeMatch
+=======
       method: "POST",
       url: "/api/add",
+<<<<<<< HEAD
       data: newMatch
+>>>>>>> master
     }).then(loadResults());
+=======
+      coffeeType: newMatch
+    }).then(loadResults);
+>>>>>>> master
   }
   updatesurvey();
 });
-
 function getMatch() {
   var quizData = [
     $("#q1").val(),
@@ -66,7 +76,6 @@ function getMatch() {
    
   }
 }
-
 var coffeeList = [
   {
     name: "Black Coffee",
@@ -92,4 +101,4 @@ var coffeeList = [
     name: "Caramel Macchiato",
     scores: [2, 2, 1, 4, 2, 5, 3, 4]
   }
-];
+]

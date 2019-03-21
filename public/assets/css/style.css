@@ -14,7 +14,7 @@ html {
     margin-top: 100px;
   }
   .login .card {
-    background: rgba(0, 0, 0, .6);
+    background-color: rgba(46, 31, 12, 0.6);
   }
   .login label {
     font-size: 16px;
@@ -29,25 +29,21 @@ html {
     color: #fff !important;
   } 
 
-  setup {
-      /* this is a test */
-  }
 
   #fullBackground {
-    background-color: #2E1F0C;
+    background-color: rgba(46, 31, 12, 0.6);
     
   }
 
   #backToResults {
-    background-color: #2E1F0C;
+    background-color: rgba(46, 31, 12, 0.6);
 }
 
 
 /* RESULTS PAGE CSS */
 
-
 #titleResults {
-  background-color: #2E1F0C;
+  background-color: rgba(46, 31, 12, 0.6);
   padding: 20px;
 
 }
