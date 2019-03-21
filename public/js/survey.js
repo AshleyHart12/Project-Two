@@ -12,8 +12,17 @@ $("#backToResults").on("click", function() {
     $.ajax({
       method: "PUT",
       url: "/api/all",
+
+
       coffeeType: coffeeMatch
+
+    }).then(function(data) {
+      window.location = "/results";
+    });
+
+
     }).then(loadResults());
+
   }
   updatesurvey();
 });
