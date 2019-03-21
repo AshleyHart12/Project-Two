@@ -1,23 +1,20 @@
 $("#backToResults").on("click", function() {
   event.preventDefault();
   console.log("I've been clicked.");
-
   var coffeeMatch = getMatch();
-
+  function loadResults() {
+    window.location.assign("/results");
+  }
   function updatesurvey(CoffeeQuizes) {
-   
-  console.log("I will record this coffee to the database: " + coffeeMatch);
+    console.log("I will record this coffee to the database: " + coffeeMatch);
     $.ajax({
       method: "PUT",
       url: "/api/all",
       coffeeType: coffeeMatch
-    }).then(function(data) {
-      window.location = "/results";
-    });
+    }).then(loadResults());
   }
   updatesurvey();
 });
-
 function getMatch() {
   var quizData = [
     $("#q1").val(),
@@ -29,12 +26,10 @@ function getMatch() {
     $("#q7").val(),
     $("#q8").val()
   ];
-
   console.log("Beginning to test for matches.....");
   console.log("My scores are: " + quizData);
   var bestMatch = 0;
   var scoresArray = [];
-
   for (var i = 0; i < quizData.length; i++) {
     var scoresDiff = 0;
     console.log("Running outer loop...");
@@ -51,7 +46,6 @@ function getMatch() {
     scoresArray.push(scoresDiff);
     console.log("My scores are:" + scoresArray);
   }
-
   for (var i = 0; i < scoresArray.length; i++) {
     if (scoresArray[i] <= scoresArray[bestMatch]) {
       bestMatch = i;
@@ -61,10 +55,13 @@ function getMatch() {
   console.log(bestMatch);
   var bestMatchIndex = parseInt(bestMatch);
   console.log(bestMatchIndex);
-  console.log(coffeeList[parseInt(bestMatchIndex)].name);
-  return coffeeList[parseInt(bestMatchIndex)].name;
+  //console.log(coffeeList[parseInt(bestMatchIndex)].name);
+  if (bestMatchIndex >= 6) {
+    return coffeeList[5].name;
+  } else {
+    return coffeeList[parseInt(bestMatchIndex)].name;
+  }
 }
-
 var coffeeList = [
   {
     name: "Black Coffee",
@@ -90,4 +87,4 @@ var coffeeList = [
     name: "Caramel Macchiato",
     scores: [2, 2, 1, 4, 2, 5, 3, 4]
   }
-];
+]
