@@ -3,7 +3,7 @@
 
 Check it out: https://mighty-taiga-75803.herokuapp.com/
 
-
+![website image](coffeeQuiz.png)
 
 
 #### Technologies Used:
